@@ -9,9 +9,11 @@ class Rates extends Component {
     render() {
         return (
             <div>
+                <button onClick={this.props.getRates}> Update Rates </button>
+                <h1>CrytotoCurrency Rates</h1>
                 <ul>
                     {this.props.currates.map(rate => (
-                        <li key={rate.name}> {rate.name}: ${rate.price_usd} </li>
+                        <li key={rate.name}> {rate.name}: &#x24;{rate.price_usd} </li>
                     ))}
                 </ul>
             </div>
